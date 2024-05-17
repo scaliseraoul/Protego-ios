@@ -11,6 +11,10 @@
 		934148A72BE2A4880057685D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934148A62BE2A4880057685D /* ContentView.swift */; };
 		934148A92BE2A4960057685D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934148A82BE2A4960057685D /* Assets.xcassets */; };
 		934148AC2BE2A4960057685D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934148AB2BE2A4960057685D /* Preview Assets.xcassets */; };
+		934148B52BE2A6500057685D /* SoundClassifierViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934148B42BE2A6500057685D /* SoundClassifierViewModel.swift */; };
+		9398C0462BF7F5A100BE79E9 /* AudioCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C0452BF7F5A100BE79E9 /* AudioCapture.swift */; };
+		93C7896C2BEF9118006B9080 /* 4Trimmed2LTSM.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 93C7896B2BEF9118006B9080 /* 4Trimmed2LTSM.mlpackage */; };
+		93E669382BE7BB8F00484BD2 /* Protego.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 93E669372BE7BB8F00484BD2 /* Protego.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		934148A62BE2A4880057685D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		934148A82BE2A4960057685D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		934148AB2BE2A4960057685D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		934148B42BE2A6500057685D /* SoundClassifierViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundClassifierViewModel.swift; sourceTree = "<group>"; };
+		934148B62BE2A8C90057685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9398C0452BF7F5A100BE79E9 /* AudioCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCapture.swift; sourceTree = "<group>"; };
+		93C7896B2BEF9118006B9080 /* 4Trimmed2LTSM.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = 4Trimmed2LTSM.mlpackage; path = ../../../../../../Desktop/conversion_project/4Trimmed2LTSM.mlpackage; sourceTree = "<group>"; };
+		93E669372BE7BB8F00484BD2 /* Protego.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Protego.mlmodel; path = "../../../../../../Desktop/Protego_dataset/0 split/Protego.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +60,13 @@
 		934148A32BE2A4880057685D /* Protego-Test */ = {
 			isa = PBXGroup;
 			children = (
+				934148B62BE2A8C90057685D /* Info.plist */,
 				934148A42BE2A4880057685D /* Protego_TestApp.swift */,
+				934148B42BE2A6500057685D /* SoundClassifierViewModel.swift */,
 				934148A62BE2A4880057685D /* ContentView.swift */,
 				934148A82BE2A4960057685D /* Assets.xcassets */,
 				934148AA2BE2A4960057685D /* Preview Content */,
+				9398C0452BF7F5A100BE79E9 /* AudioCapture.swift */,
 			);
 			path = "Protego-Test";
 			sourceTree = "<group>";
@@ -62,7 +74,9 @@
 		934148AA2BE2A4960057685D /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				93C7896B2BEF9118006B9080 /* 4Trimmed2LTSM.mlpackage */,
 				934148AB2BE2A4960057685D /* Preview Assets.xcassets */,
+				93E669372BE7BB8F00484BD2 /* Protego.mlmodel */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -138,7 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				934148A72BE2A4880057685D /* ContentView.swift in Sources */,
+				9398C0462BF7F5A100BE79E9 /* AudioCapture.swift in Sources */,
 				934148A52BE2A4880057685D /* Protego_TestApp.swift in Sources */,
+				934148B52BE2A6500057685D /* SoundClassifierViewModel.swift in Sources */,
+				93E669382BE7BB8F00484BD2 /* Protego.mlmodel in Sources */,
+				93C7896C2BEF9118006B9080 /* 4Trimmed2LTSM.mlpackage in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,13 +290,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Protego-Test/Preview Content\"";
+				DEVELOPMENT_TEAM = JNRUDPLA3G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Protego-Test/Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = Please;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,13 +322,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Protego-Test/Preview Content\"";
+				DEVELOPMENT_TEAM = JNRUDPLA3G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Protego-Test/Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = Please;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = SoundClassifierViewModel()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+            Text("Detecting hazardous situations in real-time...")
+                .font(.title)
+                .padding()
+            Text(viewModel.classificationResult)
+                .font(.title2)
+                .padding()
+            }
     }
 }
 
