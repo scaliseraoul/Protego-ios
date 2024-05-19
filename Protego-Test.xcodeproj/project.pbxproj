@@ -12,6 +12,7 @@
 		934148A92BE2A4960057685D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934148A82BE2A4960057685D /* Assets.xcassets */; };
 		934148AC2BE2A4960057685D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934148AB2BE2A4960057685D /* Preview Assets.xcassets */; };
 		934148B52BE2A6500057685D /* SoundClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934148B42BE2A6500057685D /* SoundClassifier.swift */; };
+		938989882BFA2CC30029CA52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938989872BFA2CC20029CA52 /* AppDelegate.swift */; };
 		938FE8882BF9239D00F1602E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FE8872BF9239D00F1602E /* AppState.swift */; };
 		938FE88A2BF9463C00F1602E /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 938FE8892BF9463C00F1602E /* alarm.mp3 */; };
 		938FE88C2BF94F4000F1602E /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FE88B2BF94F4000F1602E /* SplashScreenView.swift */; };
@@ -32,6 +33,7 @@
 		934148AB2BE2A4960057685D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		934148B42BE2A6500057685D /* SoundClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundClassifier.swift; sourceTree = "<group>"; };
 		934148B62BE2A8C90057685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		938989872BFA2CC20029CA52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		938FE8872BF9239D00F1602E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		938FE8892BF9463C00F1602E /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		938FE88B2BF94F4000F1602E /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				938FE88D2BF9519000F1602E /* WaveformView.swift */,
 				938FE88F2BF95E4100F1602E /* ProtegoImage.swift */,
 				934148B42BE2A6500057685D /* SoundClassifier.swift */,
+				938989872BFA2CC20029CA52 /* AppDelegate.swift */,
 				938FE8872BF9239D00F1602E /* AppState.swift */,
 				9398C04D2BF8BF7800BE79E9 /* NotificationsManager.swift */,
 				9398C04F2BF8C15400BE79E9 /* PermissionsManager.swift */,
@@ -181,6 +184,7 @@
 				9398C04E2BF8BF7800BE79E9 /* NotificationsManager.swift in Sources */,
 				938FE88C2BF94F4000F1602E /* SplashScreenView.swift in Sources */,
 				934148A52BE2A4880057685D /* ProtegoApp.swift in Sources */,
+				938989882BFA2CC30029CA52 /* AppDelegate.swift in Sources */,
 				938FE8902BF95E4100F1602E /* ProtegoImage.swift in Sources */,
 				934148B52BE2A6500057685D /* SoundClassifier.swift in Sources */,
 				9398C04A2BF7F9FD00BE79E9 /* Protego.mlmodel in Sources */,
@@ -316,10 +320,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Protego-Test/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JNRUDPLA3G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Protego-Test/Info.plist";

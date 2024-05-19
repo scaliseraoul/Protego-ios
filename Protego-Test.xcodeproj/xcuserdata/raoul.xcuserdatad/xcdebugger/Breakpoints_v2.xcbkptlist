@@ -46,8 +46,8 @@
             filePath = "Protego-Test/SoundClassifier.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "request(_:didProduce:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -66,6 +66,132 @@
             endingLineNumber = "30"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F765F97-DD41-402F-BDE0-863DF1A7EDCA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Protego-Test/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "applicationWillTerminate(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0F765F97-DD41-402F-BDE0-863DF1A7EDCA - 8d80bdea08dcc1b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Protego_Test.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "Protego-Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raoul/Documents/XcodeProject/Protego-Test/Protego-Test/Protego-Test/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "0F765F97-DD41-402F-BDE0-863DF1A7EDCA - dfa8276106bfd197"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Protego_Test.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "Protego-Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raoul/Documents/XcodeProject/Protego-Test/Protego-Test/Protego-Test/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "0F765F97-DD41-402F-BDE0-863DF1A7EDCA - babbb56660dbd479"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Protego_Test.AppDelegate.applicationWillTerminate(__C.UIApplication) -&gt; ()"
+                  moduleName = "Protego-Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raoul/Documents/XcodeProject/Protego-Test/Protego-Test/Protego-Test/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "828F922A-E393-459F-9619-3D222331FFC3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Protego-Test/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "applicationWillTerminate(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "828F922A-E393-459F-9619-3D222331FFC3 - 8d80bdea08dcc1b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Protego_Test.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "Protego-Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raoul/Documents/XcodeProject/Protego-Test/Protego-Test/Protego-Test/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "828F922A-E393-459F-9619-3D222331FFC3 - dfa8276106bfd197"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Protego_Test.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "Protego-Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raoul/Documents/XcodeProject/Protego-Test/Protego-Test/Protego-Test/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "828F922A-E393-459F-9619-3D222331FFC3 - babbb56660dbcb98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Protego_Test.AppDelegate.applicationWillTerminate(__C.UIApplication) -&gt; ()"
+                  moduleName = "Protego-Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raoul/Documents/XcodeProject/Protego-Test/Protego-Test/Protego-Test/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -14,11 +14,6 @@ struct SplashScreenView: View {
         VStack {
             Spacer()
             ProtegoImage(size: 100)
-            Image("protego-transparent")
-                .resizable()
-                .frame(width: 100, height: 100)
-                .padding(.bottom, 20)
-            
             Spacer()
         }
     }

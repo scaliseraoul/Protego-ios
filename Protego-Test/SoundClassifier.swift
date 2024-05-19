@@ -45,15 +45,12 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
         }
     }
     
-    deinit {
-        stopListeningNotification()
-    }
-    
     private func startAudioSession() throws {
         do {
             let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(.playAndRecord, mode: .default, options: [.mixWithOthers])
+            try audioSession.setCategory(.playAndRecord, mode: .default, options: [.interruptSpokenAudioAndMixWithOthers])
             try audioSession.setActive(true)
+            try audioSession.overrideOutputAudioPort(.speaker)
         } catch {
             throw error
         }
@@ -97,7 +94,7 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
             var aggressionThreshold = 2
             
             if test {
-                aggressionThreshold = 3
+                aggressionThreshold = 5
             }
             
             if test || ( classification.identifier == "aggression" && classification.confidence > 0.9 )  {
@@ -135,21 +132,17 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
         }
     }
     
-    
     func scheduleListeningNotification() {
         let title = "Protego is listening"
         let body = "No data is stored or uploaded."
-        let interval = 60.0
+        let interval = 1800.0 //every 30 min
         let identifier = "ListeningNotification"
         
         notificationsManager.scheduleRecurringNotification(title: title, body: body, timeInterval: interval, identifier: identifier)
     }
     
-    func stopListeningNotification() {
-        notificationsManager.stopRecurringNotification(identifier: "ListeningNotification")
-    }
-    
     func triggerEmergency() {
+        
         self.appState.shouldNavigateToEmergency = true
         self.playEmergencySound()
         self.triggerVibration()

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct OnboardingView: View {
-    @Binding var isOnboardingComplete: Bool
+    @EnvironmentObject var appState: AppState
     @State private var permissionDenied = false
     
     var body: some View {
@@ -72,7 +72,7 @@ struct OnboardingView: View {
                 PermissionsManager.requestNotificationPermission { notificationGranted in
                     DispatchQueue.main.async {
                         if notificationGranted {
-                            isOnboardingComplete = true
+                            appState.currentView = .home
                         } else {
                             permissionDenied = true
                         }
@@ -98,6 +98,6 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView(isOnboardingComplete: .constant(false))
+        OnboardingView()
     }
 }

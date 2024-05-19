@@ -11,38 +11,17 @@ import SwiftUI
 struct ProtegoApp: App {
     
     @Environment(\.scenePhase) private var scenePhase
-    
-    private var permissionManager = PermissionsManager.shared
-    private var notificationsManager = NotificationsManager.shared
-    @State private var showOnboarding = true
-    @State private var showSplashscreen = true
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject var appState = AppState()
     
     init() {
-        
+        appState.currentView = .splashScreen
     }
     
     var body: some Scene {
         WindowGroup {
-            
-            if showSplashscreen {
-                SplashScreenView()
-                    .onAppear {
-                        PermissionsManager.arePermissionsGranted { granted in
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                showOnboarding = !granted
-                                showSplashscreen = false
-                            }
-                        }
-                    }
-            } else {
-                if showOnboarding {
-                    OnboardingView(isOnboardingComplete: $showOnboarding)
-                } else {
-                    HomeView()
-                }
-            }
-            
-            
+            RootView()
+                .environmentObject(appState)
         }.onChange(of: scenePhase) { newPhase in
             if newPhase == .background {
                 //notificationsManager.scheduleSingleNotification(title: "Protego is listening", body: "No data is uploaded or stored.")
@@ -50,6 +29,33 @@ struct ProtegoApp: App {
                 //scheduleAppBackgroundNotification(state: "active")
             } else if newPhase == .inactive {
                 //scheduleAppBackgroundNotification(state: "inactive")
+            }
+        }
+    }
+    
+    struct RootView: View {
+        @EnvironmentObject var appState: AppState
+
+        var body: some View {
+            switch appState.currentView {
+            case .splashScreen:
+                SplashScreenView()
+                    .onAppear {
+                        PermissionsManager.arePermissionsGranted { granted in
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                if granted {
+                                    appState.currentView = .home
+                                }
+                                else {
+                                    appState.currentView = .onboarding
+                                }
+                            }
+                        }
+                    }
+            case .onboarding:
+                OnboardingView()
+            case .home:
+                HomeView()
             }
         }
     }

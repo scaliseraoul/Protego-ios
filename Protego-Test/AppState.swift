@@ -9,4 +9,12 @@ import Foundation
 
 class AppState: ObservableObject {
     @Published var shouldNavigateToEmergency: Bool = false
+    
+    enum FirstViewState {
+        case splashScreen
+        case onboarding
+        case home
+    }
+    
+    @Published var currentView: FirstViewState = .splashScreen
 }
