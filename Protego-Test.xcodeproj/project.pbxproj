@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		934148A12BE2A4880057685D /* Protego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protego.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		934148A12BE2A4880057685D /* Protego-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Protego-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		934148A42BE2A4880057685D /* ProtegoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtegoApp.swift; sourceTree = "<group>"; };
 		934148A62BE2A4880057685D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		934148A82BE2A4960057685D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		934148A22BE2A4880057685D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				934148A12BE2A4880057685D /* Protego.app */,
+				934148A12BE2A4880057685D /* Protego-Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		934148A02BE2A4880057685D /* Protego */ = {
+		934148A02BE2A4880057685D /* Protego-Test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 934148AF2BE2A4960057685D /* Build configuration list for PBXNativeTarget "Protego" */;
+			buildConfigurationList = 934148AF2BE2A4960057685D /* Build configuration list for PBXNativeTarget "Protego-Test" */;
 			buildPhases = (
 				9341489D2BE2A4880057685D /* Sources */,
 				9341489E2BE2A4880057685D /* Frameworks */,
@@ -120,9 +120,9 @@
 			);
 			dependencies = (
 			);
-			name = Protego;
+			name = "Protego-Test";
 			productName = "Protego-Test";
-			productReference = 934148A12BE2A4880057685D /* Protego.app */;
+			productReference = 934148A12BE2A4880057685D /* Protego-Test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +140,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9341489C2BE2A4880057685D /* Build configuration list for PBXProject "Protego" */;
+			buildConfigurationList = 9341489C2BE2A4880057685D /* Build configuration list for PBXProject "Protego-Test" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -153,7 +153,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				934148A02BE2A4880057685D /* Protego */,
+				934148A02BE2A4880057685D /* Protego-Test */,
 			);
 		};
 /* End PBXProject section */
@@ -385,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9341489C2BE2A4880057685D /* Build configuration list for PBXProject "Protego" */ = {
+		9341489C2BE2A4880057685D /* Build configuration list for PBXProject "Protego-Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				934148AD2BE2A4960057685D /* Debug */,
@@ -394,7 +394,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		934148AF2BE2A4960057685D /* Build configuration list for PBXNativeTarget "Protego" */ = {
+		934148AF2BE2A4960057685D /* Build configuration list for PBXNativeTarget "Protego-Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				934148B02BE2A4960057685D /* Debug */,
