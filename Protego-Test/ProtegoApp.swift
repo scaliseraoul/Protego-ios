@@ -15,13 +15,16 @@ struct ProtegoApp: App {
     @StateObject var appState = AppState()
     
     init() {
-        appState.currentView = .splashScreen
+        
     }
     
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environmentObject(appState)
+                .onAppear {
+                                    appState.currentView = .splashScreen
+                }
         }.onChange(of: scenePhase) { newPhase in
             if newPhase == .background {
                 //notificationsManager.scheduleSingleNotification(title: "Protego is listening", body: "No data is uploaded or stored.")
