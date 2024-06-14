@@ -25,23 +25,14 @@ struct HomeView: View {
                     .padding(.bottom, 20)
                 
                 Text("""
-                        This app monitors audio to detect emergencies.
+                        This app listens for danger signs in the foreground and background to detect emergencies.
                         
-                        The app listens for danger signs both in the foreground and background.
-                        
-                        Keep the app open when you feel unsafe, and close it when you are safe.
+                        📢 Keep it open and turn up the volume when you feel unsafe; close it when you're safe.
                         
                         🔒 No data is uploaded or stored.
                         """)
                 .font(.body)
                 .padding()
-                
-                /*
-                 Text("Protego is listening...")
-                 .font(.title)
-                 .padding()
-                 .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                 */
                 WaveformView()
                     .padding()
                     .padding(.bottom,  0)

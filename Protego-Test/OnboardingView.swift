@@ -24,15 +24,13 @@ struct OnboardingView: View {
                 .padding(.bottom, 10)
             
             Text("""
-                    This app monitors audio to detect emergencies.
+                    This app listens for danger signs in the foreground and background to detect emergencies.
                     
-                    We need access to your microphone and permission to send notifications.
-                    
-                    The app listens for danger signs both in the foreground and background.
-                    
-                    Keep the app open when you feel unsafe, and close it when you are safe.
+                    📢 Keep it open and turn up the volume when you feel unsafe; close it when you're safe.
                     
                     🔒 No data is uploaded or stored.
+                    
+                    We need access to your microphone and permission to send notifications.
                     """)
             .font(.body)
             .padding()

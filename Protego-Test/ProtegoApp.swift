@@ -23,7 +23,7 @@ struct ProtegoApp: App {
             RootView()
                 .environmentObject(appState)
                 .onAppear {
-                                    appState.currentView = .splashScreen
+                    appState.currentView = .splashScreen
                 }
         }.onChange(of: scenePhase) { newPhase in
             if newPhase == .background {
