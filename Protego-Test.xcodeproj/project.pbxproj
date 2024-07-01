@@ -23,6 +23,7 @@
 		9398C0502BF8C15400BE79E9 /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C04F2BF8C15400BE79E9 /* PermissionsManager.swift */; };
 		9398C0532BF8C8DF00BE79E9 /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C0522BF8C8DF00BE79E9 /* EmergencyView.swift */; };
 		9398C0552BF90C8600BE79E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C0542BF90C8600BE79E9 /* OnboardingView.swift */; };
+		93AC4B002C31C662000BF640 /* StrobeLightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC4AFF2C31C662000BF640 /* StrobeLightController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9398C04F2BF8C15400BE79E9 /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
 		9398C0522BF8C8DF00BE79E9 /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		9398C0542BF90C8600BE79E9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		93AC4AFF2C31C662000BF640 /* StrobeLightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrobeLightController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				9325DE5B2C1D9A8200FD2B82 /* Views */,
 				9325DE5C2C1D9AA800FD2B82 /* Components */,
 				934148B42BE2A6500057685D /* SoundClassifier.swift */,
+				93AC4AFF2C31C662000BF640 /* StrobeLightController.swift */,
 				938989872BFA2CC20029CA52 /* AppDelegate.swift */,
 				938FE8872BF9239D00F1602E /* AppState.swift */,
 				9398C04D2BF8BF7800BE79E9 /* NotificationsManager.swift */,
@@ -201,6 +204,7 @@
 				938FE88C2BF94F4000F1602E /* SplashScreenView.swift in Sources */,
 				934148A52BE2A4880057685D /* ProtegoApp.swift in Sources */,
 				938989882BFA2CC30029CA52 /* AppDelegate.swift in Sources */,
+				93AC4B002C31C662000BF640 /* StrobeLightController.swift in Sources */,
 				938FE8902BF95E4100F1602E /* ProtegoImage.swift in Sources */,
 				934148B52BE2A6500057685D /* SoundClassifier.swift in Sources */,
 				9398C04A2BF7F9FD00BE79E9 /* Protego.mlmodel in Sources */,

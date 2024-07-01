@@ -12,7 +12,7 @@ import SwiftUI
 import MediaPlayer
 import AudioToolbox
 
-class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
+class SoundClassifier: NSObject, ObservableObject, SNResultsObserving {
     
     private let audioEngine = AVAudioEngine()
     private var soundClassifier: Protego?
@@ -28,6 +28,8 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
     
     @Published var classificationResult: String = "Identifying sounds..."
     
+    let strobeController = StrobeLightController()
+    
     enum SystemAudioClassificationError: Error {
         case audioStreamInterrupted
         case noMicrophoneAccess
@@ -42,21 +44,15 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
             NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: nil)
             scheduleListeningNotification()
         } catch {
+            print("Failed to initialize audio session: \(error)")
         }
     }
     
     private func startAudioSession() throws {
-        do {
-            let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(.playAndRecord, mode: .default, options: [.interruptSpokenAudioAndMixWithOthers])
-            try audioSession.setActive(true)
-            try audioSession.overrideOutputAudioPort(.speaker)
-        } catch {
-            throw error
-        }
+        let audioSession = AVAudioSession.sharedInstance()
+        try audioSession.setCategory(.playAndRecord, mode: .default, options: [.mixWithOthers, .defaultToSpeaker, .allowBluetooth])
+        try audioSession.setActive(true)
     }
-    
-    
     
     private func initializeAudioEngine() {
         do {
@@ -79,8 +75,6 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
     }
     
     func request(_ request: SNRequest, didProduce result: SNResult) {
-        
-        
         guard let result = result as? SNClassificationResult,
               let classification = result.classifications.first,
               classification.confidence > 0.6 else { return }
@@ -97,7 +91,7 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
                 aggressionThreshold = 5
             }
             
-            if test || ( classification.identifier == "aggression" && classification.confidence > 0.9 )  {
+            if test || (classification.identifier == "aggression" && classification.confidence > 0.9) {
                 self.aggressionCount += 1
                 if self.aggressionCount >= aggressionThreshold {
                     self.triggerEmergency()
@@ -122,7 +116,6 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
         case .ended:
             do {
                 try AVAudioSession.sharedInstance().setActive(true)
-                audioEngine.prepare()
                 try audioEngine.start()
             } catch {
                 print("Failed to restart audio engine: \(error)")
@@ -135,17 +128,22 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
     func scheduleListeningNotification() {
         let title = "Protego is listening"
         let body = "No data is stored or uploaded."
-        let interval = 1800.0 //every 30 min
+        let interval = 1800.0 // Every 30 min
         let identifier = "ListeningNotification"
         
         notificationsManager.scheduleRecurringNotification(title: title, body: body, timeInterval: interval, identifier: identifier)
     }
     
     func triggerEmergency() {
+        do {
+            try AVAudioSession.sharedInstance().overrideOutputAudioPort(.speaker)
+        } catch {
+            print("Error during overrideOutputAudioPort: \(error)")
+        }
         
         self.appState.shouldNavigateToEmergency = true
         self.playEmergencySound()
-        self.triggerVibration()
+        strobeController.startStrobe()
         
         if UIApplication.shared.applicationState == .background {
             let title = "Emergency Detected"
@@ -154,9 +152,11 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
         }
     }
     
+    
     func stopEmergency() {
         self.appState.shouldNavigateToEmergency = false
         stopEmergencySound()
+        strobeController.stopStrobe()
     }
     
     func playEmergencySound() {
@@ -164,7 +164,7 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.volume = 1.0 // Set volume to maximum within the app's audio session
+            audioPlayer?.volume = 1.0 // Set volume to maximum
             audioPlayer?.numberOfLoops = -1 // Loop indefinitely
             audioPlayer?.play()
         } catch {
@@ -174,9 +174,5 @@ class SoundClassifier:  NSObject, ObservableObject, SNResultsObserving {
     
     func stopEmergencySound() {
         audioPlayer?.stop()
-    }
-    
-    private func triggerVibration() {
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
 }
