@@ -143,6 +143,8 @@ class SoundClassifier: NSObject, ObservableObject {
           try interpreter.invoke()
 
           outputTensor = try interpreter.output(at: 0)
+            let probabilities = dataToFloatArray(outputTensor.data) ?? []
+            self.handleClassificationResult(probabilities)
         } catch let error {
           print(">>> Failed to invoke the interpreter with error: \(error.localizedDescription)")
           return
