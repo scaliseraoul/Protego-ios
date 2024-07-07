@@ -23,10 +23,16 @@
 		9398C0502BF8C15400BE79E9 /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C04F2BF8C15400BE79E9 /* PermissionsManager.swift */; };
 		9398C0532BF8C8DF00BE79E9 /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C0522BF8C8DF00BE79E9 /* EmergencyView.swift */; };
 		9398C0552BF90C8600BE79E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C0542BF90C8600BE79E9 /* OnboardingView.swift */; };
+		93A4C5042C3AF8EB0040E252 /* yament_tflite_classification.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 93A4C5032C3AF8EA0040E252 /* yament_tflite_classification.tflite */; };
 		93AC4B002C31C662000BF640 /* StrobeLightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC4AFF2C31C662000BF640 /* StrobeLightController.swift */; };
+		93E9FF832C3AF05300B5B875 /* sound_classifier_yamnet.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 93E9FF822C3AF05300B5B875 /* sound_classifier_yamnet.tflite */; };
+		F320877B53657F65FA9B61EE /* Pods_Protego_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538F146AEFF08E65739E9D41 /* Pods_Protego_Test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		538F146AEFF08E65739E9D41 /* Pods_Protego_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Protego_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6280A1E5E13441D5E2F03B31 /* Pods-Protego-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Protego-Test.debug.xcconfig"; path = "Target Support Files/Pods-Protego-Test/Pods-Protego-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		891C7412243C0196D3B2B480 /* Pods-Protego-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Protego-Test.release.xcconfig"; path = "Target Support Files/Pods-Protego-Test/Pods-Protego-Test.release.xcconfig"; sourceTree = "<group>"; };
 		934148A12BE2A4880057685D /* Protego-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Protego-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		934148A42BE2A4880057685D /* ProtegoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtegoApp.swift; sourceTree = "<group>"; };
 		934148A62BE2A4880057685D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -45,7 +51,9 @@
 		9398C04F2BF8C15400BE79E9 /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
 		9398C0522BF8C8DF00BE79E9 /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		9398C0542BF90C8600BE79E9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		93A4C5032C3AF8EA0040E252 /* yament_tflite_classification.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = yament_tflite_classification.tflite; sourceTree = "<group>"; };
 		93AC4AFF2C31C662000BF640 /* StrobeLightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrobeLightController.swift; sourceTree = "<group>"; };
+		93E9FF822C3AF05300B5B875 /* sound_classifier_yamnet.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound_classifier_yamnet.tflite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F320877B53657F65FA9B61EE /* Pods_Protego_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300820BBD4EBCC1ACCA108F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				538F146AEFF08E65739E9D41 /* Pods_Protego_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79D0FFDEF71CF49839975285 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6280A1E5E13441D5E2F03B31 /* Pods-Protego-Test.debug.xcconfig */,
+				891C7412243C0196D3B2B480 /* Pods-Protego-Test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9325DE5B2C1D9A8200FD2B82 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +110,8 @@
 			children = (
 				934148A32BE2A4880057685D /* Protego-Test */,
 				934148A22BE2A4880057685D /* Products */,
+				79D0FFDEF71CF49839975285 /* Pods */,
+				300820BBD4EBCC1ACCA108F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +130,8 @@
 				9398C0492BF7F9FD00BE79E9 /* Protego.mlmodel */,
 				934148B62BE2A8C90057685D /* Info.plist */,
 				934148A42BE2A4880057685D /* ProtegoApp.swift */,
+				93E9FF822C3AF05300B5B875 /* sound_classifier_yamnet.tflite */,
+				93A4C5032C3AF8EA0040E252 /* yament_tflite_classification.tflite */,
 				9325DE5B2C1D9A8200FD2B82 /* Views */,
 				9325DE5C2C1D9AA800FD2B82 /* Components */,
 				934148B42BE2A6500057685D /* SoundClassifier.swift */,
@@ -131,6 +161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 934148AF2BE2A4960057685D /* Build configuration list for PBXNativeTarget "Protego-Test" */;
 			buildPhases = (
+				1A2597173B10718914988F09 /* [CP] Check Pods Manifest.lock */,
 				9341489D2BE2A4880057685D /* Sources */,
 				9341489E2BE2A4880057685D /* Frameworks */,
 				9341489F2BE2A4880057685D /* Resources */,
@@ -184,11 +215,38 @@
 			files = (
 				934148AC2BE2A4960057685D /* Preview Assets.xcassets in Resources */,
 				934148A92BE2A4960057685D /* Assets.xcassets in Resources */,
+				93E9FF832C3AF05300B5B875 /* sound_classifier_yamnet.tflite in Resources */,
 				938FE88A2BF9463C00F1602E /* alarm.mp3 in Resources */,
+				93A4C5042C3AF8EB0040E252 /* yament_tflite_classification.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A2597173B10718914988F09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Protego-Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9341489D2BE2A4880057685D /* Sources */ = {
@@ -336,6 +394,7 @@
 		};
 		934148B02BE2A4960057685D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6280A1E5E13441D5E2F03B31 /* Pods-Protego-Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -370,6 +429,7 @@
 		};
 		934148B12BE2A4960057685D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 891C7412243C0196D3B2B480 /* Pods-Protego-Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
