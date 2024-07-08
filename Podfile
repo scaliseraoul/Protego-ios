@@ -6,6 +6,5 @@ target 'Protego-Test' do
   use_frameworks!
 
   # Pods for Protego-Test
-  pod 'TensorFlowLiteSwift'
   pod 'TensorFlowLiteTaskAudio'
 end

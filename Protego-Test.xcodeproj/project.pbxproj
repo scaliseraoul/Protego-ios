@@ -12,6 +12,7 @@
 		934148A92BE2A4960057685D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934148A82BE2A4960057685D /* Assets.xcassets */; };
 		934148AC2BE2A4960057685D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934148AB2BE2A4960057685D /* Preview Assets.xcassets */; };
 		934148B52BE2A6500057685D /* SoundClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934148B42BE2A6500057685D /* SoundClassifier.swift */; };
+		935746712C3B0AF5007626AC /* sound_classifier_yamnet.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 935746702C3B0AF5007626AC /* sound_classifier_yamnet.tflite */; };
 		938989882BFA2CC30029CA52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938989872BFA2CC20029CA52 /* AppDelegate.swift */; };
 		938FE8882BF9239D00F1602E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FE8872BF9239D00F1602E /* AppState.swift */; };
 		938FE88A2BF9463C00F1602E /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 938FE8892BF9463C00F1602E /* alarm.mp3 */; };
@@ -25,7 +26,6 @@
 		9398C0552BF90C8600BE79E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C0542BF90C8600BE79E9 /* OnboardingView.swift */; };
 		93A4C5042C3AF8EB0040E252 /* yament_tflite_classification.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 93A4C5032C3AF8EA0040E252 /* yament_tflite_classification.tflite */; };
 		93AC4B002C31C662000BF640 /* StrobeLightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC4AFF2C31C662000BF640 /* StrobeLightController.swift */; };
-		93E9FF832C3AF05300B5B875 /* sound_classifier_yamnet.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 93E9FF822C3AF05300B5B875 /* sound_classifier_yamnet.tflite */; };
 		F320877B53657F65FA9B61EE /* Pods_Protego_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538F146AEFF08E65739E9D41 /* Pods_Protego_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,7 @@
 		934148AB2BE2A4960057685D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		934148B42BE2A6500057685D /* SoundClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundClassifier.swift; sourceTree = "<group>"; };
 		934148B62BE2A8C90057685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		935746702C3B0AF5007626AC /* sound_classifier_yamnet.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound_classifier_yamnet.tflite; sourceTree = "<group>"; };
 		938989872BFA2CC20029CA52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		938FE8872BF9239D00F1602E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		938FE8892BF9463C00F1602E /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		9398C0542BF90C8600BE79E9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		93A4C5032C3AF8EA0040E252 /* yament_tflite_classification.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = yament_tflite_classification.tflite; sourceTree = "<group>"; };
 		93AC4AFF2C31C662000BF640 /* StrobeLightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrobeLightController.swift; sourceTree = "<group>"; };
-		93E9FF822C3AF05300B5B875 /* sound_classifier_yamnet.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound_classifier_yamnet.tflite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +130,7 @@
 				9398C0492BF7F9FD00BE79E9 /* Protego.mlmodel */,
 				934148B62BE2A8C90057685D /* Info.plist */,
 				934148A42BE2A4880057685D /* ProtegoApp.swift */,
-				93E9FF822C3AF05300B5B875 /* sound_classifier_yamnet.tflite */,
+				935746702C3B0AF5007626AC /* sound_classifier_yamnet.tflite */,
 				93A4C5032C3AF8EA0040E252 /* yament_tflite_classification.tflite */,
 				9325DE5B2C1D9A8200FD2B82 /* Views */,
 				9325DE5C2C1D9AA800FD2B82 /* Components */,
@@ -215,9 +215,9 @@
 			files = (
 				934148AC2BE2A4960057685D /* Preview Assets.xcassets in Resources */,
 				934148A92BE2A4960057685D /* Assets.xcassets in Resources */,
-				93E9FF832C3AF05300B5B875 /* sound_classifier_yamnet.tflite in Resources */,
 				938FE88A2BF9463C00F1602E /* alarm.mp3 in Resources */,
 				93A4C5042C3AF8EB0040E252 /* yament_tflite_classification.tflite in Resources */,
+				935746712C3B0AF5007626AC /* sound_classifier_yamnet.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
