@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930312772C3E9C9200EC15BF /* Artiberius.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 930312762C3E9C9200EC15BF /* Artiberius.mlmodel */; };
 		934148A52BE2A4880057685D /* ProtegoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934148A42BE2A4880057685D /* ProtegoApp.swift */; };
 		934148A72BE2A4880057685D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934148A62BE2A4880057685D /* HomeView.swift */; };
 		934148A92BE2A4960057685D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934148A82BE2A4960057685D /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		930312762C3E9C9200EC15BF /* Artiberius.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Artiberius.mlmodel; sourceTree = "<group>"; };
 		934148A12BE2A4880057685D /* Protego-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Protego-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		934148A42BE2A4880057685D /* ProtegoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtegoApp.swift; sourceTree = "<group>"; };
 		934148A62BE2A4880057685D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				938FE8892BF9463C00F1602E /* alarm.mp3 */,
+				930312762C3E9C9200EC15BF /* Artiberius.mlmodel */,
 				9398C0492BF7F9FD00BE79E9 /* Protego.mlmodel */,
 				934148B62BE2A8C90057685D /* Info.plist */,
 				934148A42BE2A4880057685D /* ProtegoApp.swift */,
@@ -199,6 +202,7 @@
 				938FE8882BF9239D00F1602E /* AppState.swift in Sources */,
 				934148A72BE2A4880057685D /* HomeView.swift in Sources */,
 				9398C0502BF8C15400BE79E9 /* PermissionsManager.swift in Sources */,
+				930312772C3E9C9200EC15BF /* Artiberius.mlmodel in Sources */,
 				9398C0552BF90C8600BE79E9 /* OnboardingView.swift in Sources */,
 				9398C04E2BF8BF7800BE79E9 /* NotificationsManager.swift in Sources */,
 				938FE88C2BF94F4000F1602E /* SplashScreenView.swift in Sources */,

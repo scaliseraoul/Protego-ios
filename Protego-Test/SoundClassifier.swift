@@ -42,7 +42,6 @@ class SoundClassifier: NSObject, ObservableObject, SNResultsObserving {
             try startAudioSession()
             initializeAudioEngine()
             NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: nil)
-            scheduleListeningNotification()
         } catch {
             print("Failed to initialize audio session: \(error)")
         }
@@ -142,15 +141,6 @@ class SoundClassifier: NSObject, ObservableObject, SNResultsObserving {
         @unknown default:
             break
         }
-    }
-    
-    func scheduleListeningNotification() {
-        let title = "Protego is listening"
-        let body = "No data is stored or uploaded."
-        let interval = 1800.0 // Every 30 min
-        let identifier = "ListeningNotification"
-        
-        notificationsManager.scheduleRecurringNotification(title: title, body: body, timeInterval: interval, identifier: identifier)
     }
     
     func triggerEmergency() {
