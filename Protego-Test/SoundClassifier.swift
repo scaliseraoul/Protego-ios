@@ -56,17 +56,36 @@ class SoundClassifier: NSObject, ObservableObject, SNResultsObserving {
     
     private func initializeAudioEngine() {
         do {
-            soundClassifier = try Protego()
+            soundClassifier = try Artiberius()
+            let desiredFormat = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: 16000, channels: 1, interleaved: false)!
+            
             inputFormat = audioEngine.inputNode.inputFormat(forBus: 0)
-            analyzer = SNAudioStreamAnalyzer(format: inputFormat)
+            let converter = AVAudioConverter(from: inputFormat, to: desiredFormat)!
+            
+            analyzer = SNAudioStreamAnalyzer(format: desiredFormat)
             let request = try SNClassifySoundRequest(mlModel: soundClassifier!.model)
             try analyzer.add(request, withObserver: self)
             
-            audioEngine.inputNode.installTap(onBus: 0, bufferSize: 8000, format: inputFormat) { [weak self] buffer, time in
+            let frameCount = 15600 // 0.975 seconds at 16kHz
+            
+            audioEngine.inputNode.installTap(onBus: 0, bufferSize: UInt32(frameCount), format: inputFormat) { [weak self] buffer, time in
+                let frame = AVAudioPCMBuffer(pcmFormat: desiredFormat, frameCapacity: UInt32(frameCount))!
+                var error: NSError?
+                converter.convert(to: frame, error: &error, withInputFrom: { inNumPackets, outStatus in
+                    outStatus.pointee = .haveData
+                    return buffer
+                })
+                
+                if let error = error {
+                    print("Conversion error: \(error)")
+                    return
+                }
+                
                 self?.analysisQueue.async {
-                    self?.analyzer.analyze(buffer, atAudioFramePosition: time.sampleTime)
+                    self?.analyzer.analyze(frame, atAudioFramePosition: time.sampleTime)
                 }
             }
+            
             try audioEngine.start()
             
         } catch {
