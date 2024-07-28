@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		930312772C3E9C9200EC15BF /* Artiberius.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 930312762C3E9C9200EC15BF /* Artiberius.mlmodel */; };
 		934148A52BE2A4880057685D /* ProtegoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934148A42BE2A4880057685D /* ProtegoApp.swift */; };
 		934148A72BE2A4880057685D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934148A62BE2A4880057685D /* HomeView.swift */; };
 		934148A92BE2A4960057685D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934148A82BE2A4960057685D /* Assets.xcassets */; };
@@ -19,16 +18,16 @@
 		938FE88C2BF94F4000F1602E /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FE88B2BF94F4000F1602E /* SplashScreenView.swift */; };
 		938FE88E2BF9519000F1602E /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FE88D2BF9519000F1602E /* WaveformView.swift */; };
 		938FE8902BF95E4100F1602E /* ProtegoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FE88F2BF95E4100F1602E /* ProtegoImage.swift */; };
-		9398C04A2BF7F9FD00BE79E9 /* Protego.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9398C0492BF7F9FD00BE79E9 /* Protego.mlmodel */; };
 		9398C04E2BF8BF7800BE79E9 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C04D2BF8BF7800BE79E9 /* NotificationsManager.swift */; };
 		9398C0502BF8C15400BE79E9 /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C04F2BF8C15400BE79E9 /* PermissionsManager.swift */; };
 		9398C0532BF8C8DF00BE79E9 /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C0522BF8C8DF00BE79E9 /* EmergencyView.swift */; };
 		9398C0552BF90C8600BE79E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398C0542BF90C8600BE79E9 /* OnboardingView.swift */; };
+		93A52CE42C563EE8006D7869 /* Protego.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 93A52CE32C563EE8006D7869 /* Protego.mlmodel */; };
+		93A52CE62C564336006D7869 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A52CE52C564336006D7869 /* SettingsView.swift */; };
 		93AC4B002C31C662000BF640 /* StrobeLightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC4AFF2C31C662000BF640 /* StrobeLightController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		930312762C3E9C9200EC15BF /* Artiberius.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Artiberius.mlmodel; sourceTree = "<group>"; };
 		934148A12BE2A4880057685D /* Protego-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Protego-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		934148A42BE2A4880057685D /* ProtegoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtegoApp.swift; sourceTree = "<group>"; };
 		934148A62BE2A4880057685D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -42,11 +41,12 @@
 		938FE88B2BF94F4000F1602E /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		938FE88D2BF9519000F1602E /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 		938FE88F2BF95E4100F1602E /* ProtegoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtegoImage.swift; sourceTree = "<group>"; };
-		9398C0492BF7F9FD00BE79E9 /* Protego.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Protego.mlmodel; sourceTree = "<group>"; };
 		9398C04D2BF8BF7800BE79E9 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		9398C04F2BF8C15400BE79E9 /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
 		9398C0522BF8C8DF00BE79E9 /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		9398C0542BF90C8600BE79E9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		93A52CE32C563EE8006D7869 /* Protego.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Protego.mlmodel; sourceTree = "<group>"; };
+		93A52CE52C564336006D7869 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		93AC4AFF2C31C662000BF640 /* StrobeLightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrobeLightController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +68,7 @@
 				934148A62BE2A4880057685D /* HomeView.swift */,
 				9398C0542BF90C8600BE79E9 /* OnboardingView.swift */,
 				9398C0522BF8C8DF00BE79E9 /* EmergencyView.swift */,
+				93A52CE52C564336006D7869 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,9 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				938FE8892BF9463C00F1602E /* alarm.mp3 */,
-				930312762C3E9C9200EC15BF /* Artiberius.mlmodel */,
-				9398C0492BF7F9FD00BE79E9 /* Protego.mlmodel */,
 				934148B62BE2A8C90057685D /* Info.plist */,
+				93A52CE32C563EE8006D7869 /* Protego.mlmodel */,
 				934148A42BE2A4880057685D /* ProtegoApp.swift */,
 				9325DE5B2C1D9A8200FD2B82 /* Views */,
 				9325DE5C2C1D9AA800FD2B82 /* Components */,
@@ -198,11 +198,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A52CE62C564336006D7869 /* SettingsView.swift in Sources */,
 				9398C0532BF8C8DF00BE79E9 /* EmergencyView.swift in Sources */,
 				938FE8882BF9239D00F1602E /* AppState.swift in Sources */,
 				934148A72BE2A4880057685D /* HomeView.swift in Sources */,
+				93A52CE42C563EE8006D7869 /* Protego.mlmodel in Sources */,
 				9398C0502BF8C15400BE79E9 /* PermissionsManager.swift in Sources */,
-				930312772C3E9C9200EC15BF /* Artiberius.mlmodel in Sources */,
 				9398C0552BF90C8600BE79E9 /* OnboardingView.swift in Sources */,
 				9398C04E2BF8BF7800BE79E9 /* NotificationsManager.swift in Sources */,
 				938FE88C2BF94F4000F1602E /* SplashScreenView.swift in Sources */,
@@ -211,7 +212,6 @@
 				93AC4B002C31C662000BF640 /* StrobeLightController.swift in Sources */,
 				938FE8902BF95E4100F1602E /* ProtegoImage.swift in Sources */,
 				934148B52BE2A6500057685D /* SoundClassifier.swift in Sources */,
-				9398C04A2BF7F9FD00BE79E9 /* Protego.mlmodel in Sources */,
 				938FE88E2BF9519000F1602E /* WaveformView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

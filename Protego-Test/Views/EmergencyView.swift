@@ -9,8 +9,12 @@ import Foundation
 import SwiftUI
 
 struct EmergencyView: View {
-    var soundClassifier: SoundClassifier
+    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var soundClassifier: SoundClassifier
     @Environment(\.presentationMode) var presentationMode
+    var emergencyNumber: String {
+        appState.emergencyNumber
+    }
     
     var body: some View {
         VStack {
@@ -30,7 +34,7 @@ struct EmergencyView: View {
             Spacer()
             
             Button(action: callEmergency) {
-                Text("Call Emergency Services - 112")
+                Text("Call Emergency Services - \(emergencyNumber)")
                     .font(.title2)
                     .bold()
                     .frame(maxWidth: .infinity)
@@ -57,10 +61,13 @@ struct EmergencyView: View {
             .navigationBarBackButtonHidden(true)
             .padding(.bottom)
         }
+        .onAppear {
+            callEmergency()
+        }
     }
     
     private func callEmergency() {
-        guard let url = URL(string: "tel://112") else { return }
+        guard let url = URL(string: "tel://\(emergencyNumber)") else { return }
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
         }
@@ -69,6 +76,8 @@ struct EmergencyView: View {
 
 struct EmergencyView_Previews: PreviewProvider {
     static var previews: some View {
-        EmergencyView(soundClassifier: SoundClassifier(appState: AppState()))
+        EmergencyView()
+            .environmentObject(AppState())
+            .environmentObject(SoundClassifier(appState: AppState()))
     }
 }

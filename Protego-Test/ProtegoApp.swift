@@ -12,16 +12,21 @@ struct ProtegoApp: App {
     
     @Environment(\.scenePhase) private var scenePhase
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @StateObject var appState = AppState()
+    
+    @StateObject private var appState: AppState
+    @StateObject private var soundClassifier: SoundClassifier
     
     init() {
-        
+        let appState = AppState()
+        _appState = StateObject(wrappedValue: appState)
+        _soundClassifier = StateObject(wrappedValue: SoundClassifier(appState: appState))
     }
     
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environmentObject(appState)
+                .environmentObject(soundClassifier)
                 .onAppear {
                     appState.currentView = .splashScreen
                 }

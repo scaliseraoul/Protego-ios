@@ -17,4 +17,14 @@ class AppState: ObservableObject {
     }
     
     @Published var currentView: FirstViewState = .splashScreen
+    
+    @Published var emergencyNumber: String {
+        didSet {
+            UserDefaults.standard.set(emergencyNumber, forKey: "emergencyNumber")
+        }
+    }
+        
+    init() {
+        self.emergencyNumber = UserDefaults.standard.string(forKey: "emergencyNumber") ?? "112"
+    }
 }

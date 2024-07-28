@@ -24,7 +24,7 @@ class SoundClassifier: NSObject, ObservableObject, SNResultsObserving {
     var analyzer: SNAudioStreamAnalyzer!
     let analysisQueue = DispatchQueue(label: "Raoul.Protego-Test")
     
-    private var aggressionCount = 0
+    private var classificationWindow: [Bool] = []
     
     @Published var classificationResult: String = "Identifying sounds..."
     
@@ -55,36 +55,17 @@ class SoundClassifier: NSObject, ObservableObject, SNResultsObserving {
     
     private func initializeAudioEngine() {
         do {
-            soundClassifier = try Artiberius()
-            let desiredFormat = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: 16000, channels: 1, interleaved: false)!
-            
+            soundClassifier = try Protego()
             inputFormat = audioEngine.inputNode.inputFormat(forBus: 0)
-            let converter = AVAudioConverter(from: inputFormat, to: desiredFormat)!
-            
-            analyzer = SNAudioStreamAnalyzer(format: desiredFormat)
+            analyzer = SNAudioStreamAnalyzer(format: inputFormat)
             let request = try SNClassifySoundRequest(mlModel: soundClassifier!.model)
             try analyzer.add(request, withObserver: self)
             
-            let frameCount = 15600 // 0.975 seconds at 16kHz
-            
-            audioEngine.inputNode.installTap(onBus: 0, bufferSize: UInt32(frameCount), format: inputFormat) { [weak self] buffer, time in
-                let frame = AVAudioPCMBuffer(pcmFormat: desiredFormat, frameCapacity: UInt32(frameCount))!
-                var error: NSError?
-                converter.convert(to: frame, error: &error, withInputFrom: { inNumPackets, outStatus in
-                    outStatus.pointee = .haveData
-                    return buffer
-                })
-                
-                if let error = error {
-                    print("Conversion error: \(error)")
-                    return
-                }
-                
+            audioEngine.inputNode.installTap(onBus: 0, bufferSize: 8000, format: inputFormat) { [weak self] buffer, time in
                 self?.analysisQueue.async {
-                    self?.analyzer.analyze(frame, atAudioFramePosition: time.sampleTime)
+                    self?.analyzer.analyze(buffer, atAudioFramePosition: time.sampleTime)
                 }
             }
-            
             try audioEngine.start()
             
         } catch {
@@ -103,20 +84,27 @@ class SoundClassifier: NSObject, ObservableObject, SNResultsObserving {
             self.classificationResult = "\(Int(classification.confidence * 100.0))% \(classification.identifier)"
             
             let test = false
-            var aggressionThreshold = 2
+            var aggressionThreshold = 4
+            let windowSize = 5
             
             if test {
-                aggressionThreshold = 5
+                aggressionThreshold = 1
             }
             
-            if test || (classification.identifier == "aggression" && classification.confidence > 0.9) {
-                self.aggressionCount += 1
-                if self.aggressionCount >= aggressionThreshold {
-                    self.triggerEmergency()
-                    self.aggressionCount = 0
-                }
-            } else {
-                self.aggressionCount = 0
+            // Update the window with the latest classification
+            self.classificationWindow.append(classification.identifier == "aggression" && classification.confidence > 0.85)
+            
+            // Keep only the last 'windowSize' classifications
+            if self.classificationWindow.count > windowSize {
+                self.classificationWindow.removeFirst()
+            }
+            
+            // Count aggression detections in the current window
+            let aggressionCount = self.classificationWindow.filter { $0 }.count
+            
+            if aggressionCount >= aggressionThreshold {
+                self.triggerEmergency()
+                self.classificationWindow.removeAll() // Reset the window after triggering
             }
         }
     }

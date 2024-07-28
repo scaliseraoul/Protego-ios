@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject private var appState = AppState()
-    @StateObject private var soundClassifier: SoundClassifier
+    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var soundClassifier: SoundClassifier
+    @State private var showSettings = false
     
     init() {
-        let appState = AppState()
-        _soundClassifier = StateObject(wrappedValue: SoundClassifier(appState: appState))
-        _appState = StateObject(wrappedValue: appState)
     }
     
     var body: some View {
@@ -40,8 +38,10 @@ struct HomeView: View {
                 Text(soundClassifier.classificationResult)
                     .font(.body)
                 
-                NavigationLink(destination: EmergencyView(soundClassifier: soundClassifier), isActive: $appState.shouldNavigateToEmergency) {
-                }
+                NavigationLink(
+                    destination: EmergencyView().environmentObject(appState)
+                        .environmentObject(soundClassifier), isActive: $appState.shouldNavigateToEmergency) {
+                        }
                 Spacer()
                 Button(action: testEmergency) {
                     Text("Test Emergency")
@@ -50,7 +50,19 @@ struct HomeView: View {
                         .cornerRadius(10)
                 }
             }
-            .navigationTitle("Protego")
+            .navigationBarTitle(Text("Protego"))
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        showSettings = true
+                    }) {
+                        Image(systemName: "gear")
+                    }
+                }
+            }
+            .sheet(isPresented: $showSettings) {
+                SettingsView()
+            }
         }
         
     }
@@ -62,4 +74,6 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .environmentObject(AppState())
+        .environmentObject(SoundClassifier(appState: AppState()))
 }
