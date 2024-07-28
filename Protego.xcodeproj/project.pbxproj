@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		934148A12BE2A4880057685D /* Protego-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Protego-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		934148A12BE2A4880057685D /* Protego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		934148A42BE2A4880057685D /* ProtegoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtegoApp.swift; sourceTree = "<group>"; };
 		934148A62BE2A4880057685D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		934148A82BE2A4960057685D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		934148982BE2A4880057685D = {
 			isa = PBXGroup;
 			children = (
-				934148A32BE2A4880057685D /* Protego-Test */,
+				934148A32BE2A4880057685D /* Protego */,
 				934148A22BE2A4880057685D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,12 +93,12 @@
 		934148A22BE2A4880057685D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				934148A12BE2A4880057685D /* Protego-Test.app */,
+				934148A12BE2A4880057685D /* Protego.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		934148A32BE2A4880057685D /* Protego-Test */ = {
+		934148A32BE2A4880057685D /* Protego */ = {
 			isa = PBXGroup;
 			children = (
 				938FE8892BF9463C00F1602E /* alarm.mp3 */,
@@ -116,7 +116,7 @@
 				934148A82BE2A4960057685D /* Assets.xcassets */,
 				934148AA2BE2A4960057685D /* Preview Content */,
 			);
-			path = "Protego-Test";
+			path = Protego;
 			sourceTree = "<group>";
 		};
 		934148AA2BE2A4960057685D /* Preview Content */ = {
@@ -130,9 +130,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		934148A02BE2A4880057685D /* Protego-Test */ = {
+		934148A02BE2A4880057685D /* Protego */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 934148AF2BE2A4960057685D /* Build configuration list for PBXNativeTarget "Protego-Test" */;
+			buildConfigurationList = 934148AF2BE2A4960057685D /* Build configuration list for PBXNativeTarget "Protego" */;
 			buildPhases = (
 				9341489D2BE2A4880057685D /* Sources */,
 				9341489E2BE2A4880057685D /* Frameworks */,
@@ -142,9 +142,9 @@
 			);
 			dependencies = (
 			);
-			name = "Protego-Test";
+			name = Protego;
 			productName = "Protego-Test";
-			productReference = 934148A12BE2A4880057685D /* Protego-Test.app */;
+			productReference = 934148A12BE2A4880057685D /* Protego.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9341489C2BE2A4880057685D /* Build configuration list for PBXProject "Protego-Test" */;
+			buildConfigurationList = 9341489C2BE2A4880057685D /* Build configuration list for PBXProject "Protego" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -175,7 +175,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				934148A02BE2A4880057685D /* Protego-Test */,
+				934148A02BE2A4880057685D /* Protego */,
 			);
 		};
 /* End PBXProject section */
@@ -346,11 +346,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Protego-Test/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Protego/Preview Content\"";
 				DEVELOPMENT_TEAM = JNRUDPLA3G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Protego-Test/Info.plist";
+				INFOPLIST_FILE = Protego/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need the microphone permission to listen for aggression cues.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -363,7 +363,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Raoul.Protego-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = Raoul.Protego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -378,13 +378,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Protego-Test/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_ASSET_PATHS = "\"Protego/Preview Content\"";
+				DEVELOPMENT_TEAM = JNRUDPLA3G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Protego-Test/Info.plist";
+				INFOPLIST_FILE = Protego/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need the microphone permission to listen for aggression cues.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -397,7 +397,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Raoul.Protego-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = Raoul.Protego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -409,7 +409,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9341489C2BE2A4880057685D /* Build configuration list for PBXProject "Protego-Test" */ = {
+		9341489C2BE2A4880057685D /* Build configuration list for PBXProject "Protego" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				934148AD2BE2A4960057685D /* Debug */,
@@ -418,7 +418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		934148AF2BE2A4960057685D /* Build configuration list for PBXNativeTarget "Protego-Test" */ = {
+		934148AF2BE2A4960057685D /* Build configuration list for PBXNativeTarget "Protego" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				934148B02BE2A4960057685D /* Debug */,

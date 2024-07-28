@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "934148A02BE2A4880057685D"
-               BuildableName = "Protego-Test.app"
-               BlueprintName = "Protego-Test"
-               ReferencedContainer = "container:Protego-Test.xcodeproj">
+               BuildableName = "Protego.app"
+               BlueprintName = "Protego"
+               ReferencedContainer = "container:Protego.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "934148A02BE2A4880057685D"
-            BuildableName = "Protego-Test.app"
-            BlueprintName = "Protego-Test"
-            ReferencedContainer = "container:Protego-Test.xcodeproj">
+            BuildableName = "Protego.app"
+            BlueprintName = "Protego"
+            ReferencedContainer = "container:Protego.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "934148A02BE2A4880057685D"
-            BuildableName = "Protego-Test.app"
-            BlueprintName = "Protego-Test"
-            ReferencedContainer = "container:Protego-Test.xcodeproj">
+            BuildableName = "Protego.app"
+            BlueprintName = "Protego"
+            ReferencedContainer = "container:Protego.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
