@@ -45,11 +45,7 @@ class PermissionsManager : NSObject{
     
     static func arePermissionsGranted(completion: @escaping (Bool) -> Void) {
         let microphoneStatus = AVCaptureDevice.authorizationStatus(for: .audio)
-        UNUserNotificationCenter.current().getNotificationSettings { settings in
-            let notificationStatus = settings.authorizationStatus == .authorized
-            //let criticalAlertStatus = settings.criticalAlertSetting == .enabled
-            completion(microphoneStatus == .authorized && notificationStatus)
-        }
+        completion(microphoneStatus == .authorized)
     }
     
 }

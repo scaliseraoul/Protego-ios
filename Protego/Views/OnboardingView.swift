@@ -69,11 +69,8 @@ struct OnboardingView: View {
             if microphoneGranted {
                 PermissionsManager.requestNotificationPermission { notificationGranted in
                     DispatchQueue.main.async {
-                        if notificationGranted {
-                            appState.currentView = .home
-                        } else {
-                            permissionDenied = true
-                        }
+                        appState.currentView = .home
+                        //TODO add a way to ask again for notification
                     }
                 }
             } else {
